@@ -1,0 +1,77 @@
+.cta-container {
+    background-color: $primary-color;
+    height: rem-calc(360px);
+
+    .cta-content {
+        width: rem-calc(600);
+        max-width: 100%;
+        
+        padding-right: rem-calc(30);
+        padding-left: rem-calc(30);
+
+        margin: 0 auto;
+        text-align: center;
+
+    }
+
+    
+        .preheading {
+            margin-bottom: 15px;
+            color: white;
+            font-size: 16px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            
+        }
+    
+        .cta-heading {
+            margin-bottom: 30px;
+            color: white;
+        }
+
+    
+    .form-wrapper {
+
+        .cta-input {
+            display: inline-block;
+            width: 100%;
+            height: rem-calc(48);
+            
+        }
+
+        .cta-button {
+            display: inline-block;
+            width: 100%;
+            height: rem-calc(48);
+
+        }
+    }
+
+
+
+    @include breakpoint(large) {
+
+        .preheading {
+            margin-bottom: 40px;
+        }
+
+        .cta-heading {
+            margin-bottom: 35px;
+        }
+
+        .form-wrapper {
+
+            .cta-input {
+                width: rem-calc(300);
+            
+            }
+
+            .cta-button {
+                width: fit-content;
+            }
+        }
+    }
+
+
+}
+

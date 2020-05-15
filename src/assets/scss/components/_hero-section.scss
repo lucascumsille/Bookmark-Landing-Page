@@ -1,0 +1,153 @@
+
+@import 'foundation';
+
+
+
+.hero-wrapper {
+    position: relative;
+
+    .grid-container {
+        padding-top: 30px !important;
+    }
+}
+
+.grid-x {
+    position: relative;
+    z-index: 2;
+}
+// ! LEFT COLUMN   
+
+.intro-header {
+    text-align: center;
+    margin-top: 50px;
+
+    @include breakpoint(xlarge) {
+        text-align: left;
+        }
+
+}
+
+.button-wrapper {
+
+    margin-top: 35px;
+    text-align: center;
+
+    @include breakpoint(xlarge) {
+    text-align: left;
+    margin-left: -3.5px;
+    }
+
+
+}
+
+//! RIGHT COLUMN
+
+#hero-image {
+    z-index: 3;
+    left:0;
+
+
+    
+    @include breakpoint(large) {
+        height:auto;
+        max-width: 600px;
+        max-width: 100%;
+        position: relative;
+        top: -65px;
+        left:20%;
+    
+ }
+
+}
+
+.pattern-container {
+    //@include position($position, $top, $right, $bottom, $left);
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+
+    background-position: bottom 0px left 50px;
+    background-size: auto 100%;
+
+    top: 100px;
+
+    height: 200px;
+    width: 100%;
+
+    
+
+// * Media Queries 
+
+    //! 
+    @media (min-width:376px) {
+        //background-position: bottom 0px right 0px;
+        background-position: bottom 0px left 50px;
+
+
+        right:0;
+        top: 100px;
+    
+        height: 200px;
+        width: 100%;
+    
+    }
+
+    @media (min-width:550px) {
+        //background-position: bottom 0px right 0px;
+        background-position: bottom 0px left 50px;
+
+
+        right:0;
+        top: 100px;
+    
+        height: 350px;
+        width: 100%;
+    
+    }
+
+    @media (min-width:1040px) {
+        //background-position: bottom 0px right 0px;
+        background-position: bottom 0px right 0px;
+
+
+        right:0;
+        top: 100px;
+    
+        height: 350px;
+        width: 100%;
+    
+    }
+  
+   
+    //! Only affects large screens and larger
+    @include breakpoint(xlarge) {
+        background-size: auto 350px;
+        background-position: bottom 0px left 50px;
+    
+       
+        right:0;
+        top: 150px;
+        left: auto;
+
+
+        max-width: 600px;
+        
+        z-index: 1; 
+    }
+
+
+    //! Only affects xlarge screens and larger
+    @include breakpoint(1441px) {
+        background-position: bottom 0px right 0px;
+        background-size: 40% auto;
+       
+        width: 100%;
+        max-width: 100%;
+
+        left:10px;
+        top: 150px;
+    }
+    
+}
+

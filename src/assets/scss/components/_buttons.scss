@@ -1,0 +1,103 @@
+.button {
+
+    @include margin(0, 3.5 ,0 , 3.5);
+    @include padding(17,20,17,20);
+    line-height: 1;
+    font-size: 13px;
+
+    color: $very-dark-blue;
+    border: $border-width-medium solid transparent;
+    background-color: $lightest;
+    box-shadow: $custom-shadow;
+    
+
+    &:hover {
+        
+        border: $border-width-medium solid $very-dark-blue;
+        background-color: $lightest;
+        color: $very-dark-blue;
+        transition: $global-transition;
+    }
+
+
+    &.primary { 
+        background-color: $primary-color;
+        color: $white;
+        border: $border-width-medium solid transparent;
+
+        &:hover {
+            background-color: $white;
+            color: $primary-color;
+            border: $border-width-medium solid $primary-color;
+
+        }
+    }
+
+
+    &.secondary { 
+        background-color: $secondary-color;
+        color: $white;
+        border: $border-width-medium solid transparent;
+
+        &:hover {
+            background-color: $white;
+            color: $secondary-color;
+            border: $border-width-medium solid $secondary-color;
+
+        }
+    }
+
+}
+
+#login-button {
+    @include padding(11,30,11,30);
+    letter-spacing: $custom-letter-spacing;
+    text-transform: uppercase;
+}
+
+
+.button-overlay {
+    background-color: transparent;
+    color: $white;
+    border: $border-width-medium solid $white;
+    @include padding(15, 1, 15, 1);
+    text-transform: uppercase;
+    width: 100%;
+    font-weight: 500;
+    font-size: $overlay-font-size;
+
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+
+.close-button {
+    position: static;
+    color: $white;
+    width: auto;
+    height: auto;
+    padding: 0;
+    font-size: 32px;
+    margin: 0;
+    line-height: 1;
+    
+
+    .span {
+        height: auto;
+        width: auto;
+
+    }
+}
+
+.custom-large {
+    line-height: 1;
+    @include padding(14, 30, 14, 30);
+
+}
+
+.custom-small {
+    line-height: 1;
+    @include padding(16, 20, 16, 20);
+
+}

@@ -1,0 +1,78 @@
+
+//* GENERAL PROPERTIES
+
+.hide-large {
+    @include hide-for(large);
+}
+
+.show-large {
+    @include show-for(large);
+}
+
+
+
+.top-bar {
+    @include padding(45,15,100,15);
+}
+
+
+.grid-container {
+    @include padding(75,30,75,30);
+
+    @include breakpoint(xlarge) {
+        @include padding(90,15,90,15);
+    
+        }
+
+    @include breakpoint(small) {
+        @include padding(null,20,null,20);
+        
+        }
+}
+
+#desktop-bar {
+    @include padding(45,15,90,15);
+
+    @include breakpoint(medium down) {
+        @include padding(45,30,90,30);
+    }
+}
+
+
+// * CARDS
+
+#card-component {
+    @include breakpoint(large) {
+        padding-top: 150px !important;
+    }
+    
+}
+
+#card-container {
+    @include breakpoint(medium down) {
+        @include padding(45,0,0,0);
+    }
+}
+
+
+// * CTA
+
+.cta-container {
+
+    @include padding(70,null,60,null);
+
+    @include breakpoint(large) {
+        @include padding(70,null,70,null);
+    }
+}
+
+
+//* FOOTER
+.footer-content-wrapper {
+    @include padding(40,30,40,30);
+
+    @include breakpoint(large) {
+        @include padding(30,null,30,null);
+        max-width: rem-calc(1110);
+    }
+}

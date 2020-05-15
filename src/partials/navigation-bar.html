@@ -1,0 +1,44 @@
+
+
+  <div id="desktop-bar" class="top-bar grid-container">
+    <div  class="top-bar-left">
+        <img href="#" src="assets/img/logo-bookmark.svg"> 
+    </div>
+    <div class="top-bar-right">
+        <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+            <button class="menu-icon" data-open="overlay-menu"></button>
+        </div>
+    </div>
+    <div class="top-bar-right" id="responsive-menu">
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li><a href="#0">Features</a></li>
+            <li><a href="#0">Pricing</a></li>
+            <li><a href="#0">Contact</a></li>
+            <li><button type="button" id="login-button" class="button secondary">Login</button></li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="reveal" id="overlay-menu" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+    <div class="overlay-container">
+      <div class="flex-con">
+        <div class="col text-left">
+          <img href="#" src="assets/img/logo-bookmark-mobile.svg"> 
+        </div>
+        <div class="col text-right">
+          <button class="close-button" data-close aria-label="Close modal" type="button"><span aria-hidden="true">&times;</span></button>
+        </div>
+      </div>
+      <ul class="vertical menu">
+        <li><a href="#0">Features</a></li>
+        <li><a href="#0">Pricing</a></li>
+        <li><a href="#0">Contact</a></li>
+        <li class="last"><button type="button" class="button button-overlay">Login</button></li>
+      </ul>
+    </div>
+    <div class="overlay-icon-wrapper">
+      <img src="assets/img/icon-facebook.svg" alt="Facebook Icon">
+      <img src="assets/img/icon-twitter.svg" alt="Twitter Icon">
+    </div>
+  </div>
+

@@ -1,0 +1,114 @@
+
+
+.faq-container {
+    margin: 0 auto;
+    width: rem-calc(550);
+    max-width: 100%;
+
+}
+
+.faq-header {
+    margin-bottom: rem-calc(45);
+
+    @include breakpoint(large) {
+        p{
+            width: 85%;
+            margin: 0 auto;
+        }
+        
+    }
+}
+
+//* TITLE
+
+:not(.is-active) > .accordion-title {
+    border-bottom: 1px solid $light-gray;
+    border-radius: 0;
+    color: $very-dark-blue;
+
+    &:hover {
+        color: $secondary-color;
+    }
+
+    &:hover:focus {
+        color: $secondary-color !important;
+    }
+    
+}
+
+/*:not(.is-active) > .accordion-title:hover, :not(.is-active) > .accordion-title:focus {
+    color: $secondary-color !important;
+} */
+
+.accordion-title {
+    border-bottom: none;
+    border-radius: 0;
+
+    color: $very-dark-blue;
+
+    transition: color .4s ease-in-out;
+
+    &:hover {
+        color: $secondary-color !important;
+    }
+
+    &:focus {
+        color: $very-dark-blue !important;
+    }
+
+    @include breakpoint(medium down) {
+        font-size: 16px;
+    }
+    
+}
+
+.accordion-item:first-child {
+    border-top: 1px solid $light-gray;
+}
+
+.accordion-item:last-child {
+    border-bottom: 1px solid $light-gray;
+}
+
+.accordion-content > p {
+
+    @include breakpoint(medium down) {
+        font-size: 16px;
+    }
+    
+}
+
+
+.faq-button-wrapper {
+   margin-top: 45px;
+   text-align: center;
+
+   @include breakpoint(large) {
+    margin-top: 45px;
+   }
+}
+
+// * ARROWS
+
+.accordion-title::before {
+    font-size: 25px;
+   font-weight: 500;
+    color: $primary-color;
+}
+
+.is-active > .accordion-title::before {
+    transform: rotate(270deg);
+    -webkit-transition: -webkit-transform .4s ease-in-out;
+    -ms-transition: -ms-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
+    color: $secondary-color;  
+    
+}
+
+.accordion-title::before {
+    transform: rotate(90deg);
+    -webkit-transition: -webkit-transform .4s ease-in-out;
+    -ms-transition: -ms-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
+    
+}

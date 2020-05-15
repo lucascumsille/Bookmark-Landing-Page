@@ -1,0 +1,91 @@
+.top-bar {
+    @include padding(45,15,100,15);
+
+
+    a {
+        line-height: 40px;
+        @include padding(0,10,0,10);
+        text-transform: uppercase;
+        letter-spacing: $custom-letter-spacing;
+    }
+
+    @include breakpoint(small down) {
+        @include padding(40, 30, 40, 30);
+
+        .title-bar {
+            background-color: transparent;
+            justify-content: flex-end;
+
+
+
+            .menu-icon {
+                @include hamburger($very-dark-blue, $very-dark-blue, 20px, 20px, 2px, 3);
+            }
+        }
+
+
+        .top-bar-right {
+            flex-basis: 50%;
+
+            
+        }
+
+        .top-bar-left {
+            flex-basis: 50%;
+
+        }
+    }
+}
+
+.flex-con {
+    display: flex;
+    width: 100%;
+
+    .col {
+        flex-basis: 50%;
+        padding: 15px 0 40px 0;
+        line-height: 32px;
+        position: relative;
+
+    }
+}
+
+// ! OVERLAY MENU
+
+#overlay-menu {
+    background-color: $very-dark-blue;
+    opacity: 90%;
+    text-align: center;
+    @include padding(40, 30, 40, 30);
+
+    li {
+        
+        @include padding(25, 30, 25, 30);
+        border-top: 1px solid $grayish-blue;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        a {
+            color: white;
+            font-size: $overlay-font-size;
+            
+        }
+
+    }
+
+}
+
+
+.is-hiddden {
+    display: none;
+}
+
+.overlay-icon-wrapper {
+    position: relative;
+    padding-top: 195px;
+
+    img {
+        margin: 0 12.5px 0 12.5px;
+    }
+}

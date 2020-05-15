@@ -1,0 +1,168 @@
+
+@import 'foundation';
+
+// @include foundation-grid;
+@include foundation-flex-classes;
+@include foundation-flex-grid;
+
+
+
+$tab-margin: 5px;
+
+.tabs-title {
+	float: none !important;
+	display:inline-block;
+	
+	margin-left:-$tab-margin;
+	
+
+	a {
+		@include padding(25,40,25,40);
+	}
+}
+
+.tab-wrapper {
+	margin-top: 30px;
+	margin-bottom: 65px;
+}
+
+.tabs {
+	margin-right: auto;
+	margin-left: auto;
+	border-bottom: 1px solid $light-gray;
+
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+
+	
+}
+
+
+.tabs-title > a:focus, .tabs-title > a[aria-selected='true'] {
+    border-bottom: 4px solid $secondary-color;
+}
+
+
+.left-column {
+	justify-self: center !important;
+}
+
+.right-column {
+	button {
+		@include margin(15, null, null, null)
+	}
+	@include breakpoint(medium down) {
+		text-align: center;
+	}
+
+}
+
+.tab-image {
+	z-index: 10;
+	position: relative;
+
+	@include breakpoint(medium only){
+		position: relative;
+		left: 50%;
+		transform: translate(-50%, 0);
+		-ms-transform: translate(-50%, 0);
+		-webkit-transform: translate(-50%, 0);
+
+	}
+
+}
+
+// * PATTERN
+
+.usp-pattern-wrapper {
+	position: absolute;
+	background-repeat: no-repeat;
+	margin-left: -30px;
+
+
+
+	@include breakpoint(small only) {	 
+		height: 200px;
+		width: 95%;
+
+		bottom: 270px;
+
+		background-position: (right 0px bottom 0px);
+		background-size:cover;
+
+	}
+
+	@include breakpoint(medium only) {	 
+		height: 350px;
+		width: 75%;
+
+		bottom: 200px;
+
+		background-position: (right 85px bottom 0px);
+		background-size:cover;
+
+	}
+	
+
+}
+
+.usp-pattern-wrapper-desktop {
+	position: absolute;
+	background-repeat: no-repeat;
+
+	height: 350px;
+	width: 45%;
+
+	background-position: (right 0px bottom 0px);
+	background-size:cover;
+	
+	top: -350px;
+
+
+}
+
+
+
+// * GENERAL BREAKPOINTS
+
+@include breakpoint(medium down) {
+	.right-column {
+		margin-top: 70px;
+	}
+}
+
+@media (max-width: 680px) {
+
+	.tabs {
+			@include flex;
+			@include flex-align(center, null);
+			@include flex-direction(column);
+
+			text-align: center;
+			border: none;
+
+			width: auto;
+
+			.tabs-title {
+				width: 100%;
+				border-bottom: 3px solid transparent;
+				margin-left:auto;
+
+				
+
+				a {
+					border-bottom: 1px solid $light-gray;
+
+				}
+			}
+		}
+
+	.tabs-title > a:focus, .tabs-title > a[aria-selected='true'] {
+		border-bottom: 4px solid $secondary-color;
+	}
+
+}
+
+
+
+
