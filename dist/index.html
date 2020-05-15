@@ -1,0 +1,298 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Bookmark landing page</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/img/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+<body>
+
+
+
+
+  <div id="desktop-bar" class="top-bar grid-container">
+    <div  class="top-bar-left">
+        <img href="#" src="assets/img/logo-bookmark.svg"> 
+    </div>
+    <div class="top-bar-right">
+        <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+            <button class="menu-icon" data-open="overlay-menu"></button>
+        </div>
+    </div>
+    <div class="top-bar-right" id="responsive-menu">
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li><a href="#0">Features</a></li>
+            <li><a href="#0">Pricing</a></li>
+            <li><a href="#0">Contact</a></li>
+            <li><button type="button" id="login-button" class="button secondary">Login</button></li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="reveal" id="overlay-menu" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+    <div class="overlay-container">
+      <div class="flex-con">
+        <div class="col text-left">
+          <img href="#" src="assets/img/logo-bookmark-mobile.svg"> 
+        </div>
+        <div class="col text-right">
+          <button class="close-button" data-close aria-label="Close modal" type="button"><span aria-hidden="true">&times;</span></button>
+        </div>
+      </div>
+      <ul class="vertical menu">
+        <li><a href="#0">Features</a></li>
+        <li><a href="#0">Pricing</a></li>
+        <li><a href="#0">Contact</a></li>
+        <li class="last"><button type="button" class="button button-overlay">Login</button></li>
+      </ul>
+    </div>
+    <div class="overlay-icon-wrapper">
+      <img src="assets/img/icon-facebook.svg" alt="Facebook Icon">
+      <img src="assets/img/icon-twitter.svg" alt="Twitter Icon">
+    </div>
+  </div>
+
+<div class="hero-wrapper">
+
+
+    <div id="hero-section" class="grid-container">
+        <div class="grid-x">
+            <div class="intro-header cell small-12 small-order-2  xlarge-5 xlarge-order-1">
+                <h1>A Simple Bookmark Manager</h1>
+                <p>A clean and simple interface to organize your favourite websites. Open a new 
+                    browser tab and see your sites load instantly. Try it for free.</p>
+                    <div class="button-wrapper">
+                        <button type="button" class="primary button">Get it on Chrome</button>
+                        <button type="button" class="button">Get it on Firefox</button>
+                    </div>
+            </div>
+            <div class="cell small-12 small-order-1 xlarge-7 xlarge-order-2">
+                <img id="hero-image" data-interchange="[assets/img/illustration-hero.svg, small]">
+            </div>
+        </div>  
+    </div>
+
+    <div class="pattern-container" data-interchange="[assets/img/Pattern.svg, small]"></div>
+</div>
+
+
+
+
+<div class="grid-container position-relative">
+    <div class="row align-center">
+        <div class="columns small-12 large-6 text-center">
+            <h2>Features</h2>
+            <p>Our aim is to make it quick and easy for you to access your favourite websites. 
+                Your bookmarks sync between your devices so you can access them on the go.</p>
+        </div>
+    </div>
+    <div class="tab-wrapper row align-center">
+        <div class="cell small-12 large-10 end">
+            <ul class="tabs" data-tabs id="usp-tabs">
+                <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Simple Bookmarking</a></li>
+                <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Speedy Searching</a></li>
+                <li class="tabs-title"><a data-tabs-target="panel3" href="#panel3">Easy Sharing</a></li>
+            </ul>
+        </div> 
+    </div>   
+
+    <div class="tabs-content position-relative" data-tabs-content="usp-tabs">
+
+        <div class="tabs-panel is-active" id="panel1">
+            <div class="row align-middle align-justify">
+                <div class="columns small-12 large-6 left-column">
+                    <img  class="tab-image" data-interchange="[assets/img/illustration-features-tab-1.svg, small]">
+                </div>
+                <div class="columns small-12 large-5 right-column">
+                    <h3>Bookmark in one click</h3>
+                    <p>  Organize your bookmarks however you like. Our simple drag-and-drop interface 
+                        gives you complete control over how you manage your favourite sites.</p>
+                    <button type="button" class="primary button custom-small hide-for-small-only">More Info</button>
+                </div>
+            </div> 
+        </div>
+
+        <div class="tabs-panel" id="panel2">
+            <div class="row align-middle align-justify">
+                <div class="columns small-12 large-6 left-column">
+                    <img  class="tab-image" data-interchange="[assets/img/illustration-features-tab-2.svg, small]">
+                </div>
+                <div class="columns small-12 large-5 right-column">
+                    <h3>Intelligent search</h3>
+                    <p>    Our powerful search feature will help you find saved sites in no time at all. 
+                        No need to trawl through all of your bookmarks.</p>
+                    <button type="button" class="primary button custom-small hide-for-small-only">More Info</button>
+                </div>
+            </div> 
+        </div>
+
+        <div class="tabs-panel" id="panel3">
+            <div class="row align-middle align-justify">
+                <div class="columns small-12 large-6 left-column">
+                    <img  class="tab-image" data-interchange="[assets/img/illustration-features-tab-3.svg, small]">
+                </div>
+                <div class="columns small-12 large-5 right-column">
+                    <h3>Share your bookmarks</h3>
+                    <p>    Easily share your bookmarks and collections with others. Create a shareable 
+                        link that you can send at the click of a button.</p>
+                    <button type="button" class="primary button custom-small hide-for-small-only">More Info</button>
+                </div>
+            </div> 
+        </div>
+        <div class="usp-pattern-wrapper hide-large" data-interchange="[assets/img/Pattern-usp.svg, small]"></div>
+    </div> 
+</div>
+
+<div class="position-relative">
+    <div class="usp-pattern-wrapper-desktop show-large" data-interchange="[assets/img/Pattern-usp.svg, small]"></div>
+</div>
+
+<div id="card-component" class="grid-container">
+    <div class="row align-center">
+        <div class="columns small-12 large-6 text-center">
+            <h2>Download the extension</h2>
+            <p>  We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+                got a favourite you’d like us to prioritize.</p>
+        </div>
+    </div>
+    
+    <div id="card-container" class="grid-container">
+        <div class="custom-grid">
+    
+            <div id="chrome-card" class="custom-frame">
+                <div class="custom-card">
+                    <img  class="card-image" data-interchange="[assets/img/logo-chrome.svg, small]">
+                    <div class="content-wrapper-card">
+                        <h4>Add to Chrome</h4>
+                        <p class="card-subtitle">Minimum version 62</p>
+                        <button type="button" class="primary button custom-large">Add & Install Extension</button>
+                    </div>
+                    <div class="dot-border" data-interchange="[assets/img/Ellipse.svg, small]"></div>
+                </div>
+            </div>
+    
+            <div id="firefox-card" class="custom-frame">
+                <div class="custom-card">
+                    <img  class="card-image" data-interchange="[assets/img/logo-firefox.svg, small]">
+                    <div class="content-wrapper-card">
+                        <h4>Add to Firefox</h4>
+                        <p class="card-subtitle">Minimum version 55</p>
+                        <button type="button" class="primary button custom-large">Add & Install Extension</button>
+                    </div>
+                    <div class="dot-border" data-interchange="[assets/img/Ellipse.svg, small]"></div>
+                </div>
+            </div>
+    
+            <div id="opera-card" class="custom-frame">
+                <div class="custom-card">
+                    <img  class="card-image" data-interchange="[assets/img/logo-opera.svg, small]">
+                    <div class="content-wrapper-card">
+                        <h4>Add to Opera</h4>
+                        <p class="card-subtitle">Minimum version 46</p>
+                        <button type="button" class="primary button custom-large">Add & Install Extension</button>        
+                    </div>
+                    <div class="dot-border" data-interchange="[assets/img/Ellipse.svg, small]"></div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+
+</div>
+<div class="grid-container">
+
+<div class="faq-container">
+    <div class="faq-header text-center">
+        <h2>Frequently Asked Questions</h2>
+        <p>  Here are some of our FAQs. If you have any other questions you’d like 
+            answered please feel free to email us.</p>
+    </div>
+
+    <ul class="accordion" data-accordion data-allow-all-closed="true">
+
+        <li class="accordion-item" data-accordion-item>
+            <a href="#" class="accordion-title">What is Bookmark?</a>
+            <div class="accordion-content" data-tab-content>
+                <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+                    justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>      
+             </div>      
+        </li>
+
+        <li class="accordion-item" data-accordion-item>
+            <a href="#" class="accordion-title">How can I request a new browser?</a>
+            <div class="accordion-content" data-tab-content>
+                <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+                    justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>      
+             </div>      
+        </li>
+
+        <li class="accordion-item" data-accordion-item>
+            <a href="#" class="accordion-title">Is there a mobile app?</a>
+            <div class="accordion-content" data-tab-content>
+                <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+                    justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>      
+             </div>      
+        </li>
+
+        <li class="accordion-item" data-accordion-item>
+            <a href="#" class="accordion-title">What about other Chromium browsers?</a>
+            <div class="accordion-content" data-tab-content>
+                <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+                    justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>      
+             </div>      
+        </li>
+    
+    </ul>
+
+    <div class="faq-button-wrapper">
+        <button type="button" class="primary button custom-small">More Info</button>
+    </div>
+
+</div>
+
+</div><div class="cta-container">
+
+    <div class="cta-content">
+        <div class="cta-header">
+            <h4 class="preheading">35,000+ already joined</h4>
+            <h3 class="cta-heading">Stay up-to-date with what we’re doing</h3>
+        </div>
+        <div class="form-wrapper">
+            <input class="cta-input" type="text" placeholder="Enter your email address here">
+            <button type="button" class="secondary button custom-large cta-button">Contact Us</button>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <div class="footer-content-wrapper">
+
+        <div class="logo-wrapper">
+            <img data-interchange="[assets/img/logo-bookmark-footer.svg, small]">
+        </div>
+        <ul class="footer-list">
+            <li><a>Features</a></li>
+            <li><a>Pricing</a></li>
+            <li><a>Contact</a></li>      
+        </ul>
+        <div class="icon-media-wrapper">
+            <div class="icon-footer-wrapper" id="facebook-footer-icon" data-interchange="[assets/img/icon-facebook.svg, small]"></div>
+            <div class="icon-footer-wrapper" data-interchange="[assets/img/icon-twitter.svg, small]"></div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
